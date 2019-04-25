@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif
+}
+
+body {
+    width: 95vw;
+    margin: auto
+}
+
+#portada{
+    background-image: url('./img/travel_2.jpg');
+    background-size: cover;
+    width: 100%;
+    height: 90vh
+}
+
+header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding-top: 5vh
+}
+
+header img{
+    width: 100%;
+    margin: auto;
+    padding: 1vw
+}
+
+header a{
+    padding: 1vw
+}
+
+.logo {
+    width: 15%
+}
+
+nav a {
+    color: white;
+    font-size: 1.2em;
+    font-style: oblique;
+    padding: 1vw;
+    margin-left: 0;
+    cursor: pointer;
+}
+
+nav a:hover{
+    color: cornflowerblue;
+    font-size: 1.5em;
+    font-style: italic;
+    padding: 2vw;
+    border: 1px solid cornflowerblue;
+    background-color: white;
+    border-radius: 5px
+}
+
+header img ~ h1{
+    text-align: center;
+    margin: auto
+}
+
+a i{
+    color: white;
+    font-size: 1.5em
+}
+
+a:hover i{
+    color: cornflowerblue;
+    font-size: 1.9em;
+    border: 1px solid cornflowerblue;
+    padding: 1vw;
+    background-color: white
+}
+
+.claim {
+    font-size: 250%;
+    color: white;
+    margin: auto;
+    width: 50%
+}
+
+.claim a{
+    background-color: yellow;
+    color: black;
+    font-size: 2vw;
+    text-decoration: none;
+    padding: 0.5vw;
+    margin: 10vh auto;
+    display: block;
+    width: 30%;
+    text-align: center;
+}

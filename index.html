@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>PRÁCTICA 1 - MRC</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=PT+Sans" rel="stylesheet">
 </head>
+
 <body>
-    
+    <div id="portada">
+        <header>
+            <div class="logo">
+                <img src="./img/iconoweb.png" alt="GeeksHub Academy [logotipo]">
+                <h1>GeeksHub<br>Travels</h1>
+            </div>
+
+            <nav>
+                <a v-for="item in articulos">{{item}}</a>
+            </nav>
+
+            <div>
+                <a v-for="item in redesSociales" v-bind:href="item.enlace" v-bind:title="item.titulo"><i
+                        v-bind:class="item.icono"></i></a>
+            </div>
+        </header>
+
+        <div class="claim">            
+            <h1>Viaja!</h1>
+            <h3>Descubre Lugares Maravillosos!</h3>
+            <a href="#">ver destinos</a>
+        </div>
+    </div>
+
+    <main></main>
+
+    <footer></footer>
+
+    <script src="./Vue.js"></script>
 </body>
 </html>
