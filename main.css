@@ -103,9 +103,9 @@ a:hover i {
     width: 50%
 }
 
-.claim a {
+.claim a, .botonFooter {
     background-color: yellow;
-    color: black;
+    color: black !important;
     font-size: 2vw;
     text-decoration: none;
     font-style: oblique;
@@ -311,7 +311,7 @@ span~span:hover #destinos>div {
     height: 5px;
 }
 
-#estamos input {
+#estamos input, #contact input {
     border: 1px solid rgba(128, 128, 128, 0.253);
     border-radius: 2px;
     width: 46%;
@@ -325,11 +325,61 @@ textarea {
     margin-top: 2vh;
     min-width: 96%;
     max-width: 96%;
-    max-height: 100px;
-    min-height: 50px
+    max-height: 150px;
+    min-height: 100px
 }
 
 #estamos small {
     letter-spacing: 0.2vw;
     color: grey
+}
+
+/* FOOTER */
+
+#contact {
+    background-color: rgb(42, 42, 95);
+    color: white
+}
+
+#contact > div {
+    display: flex;
+    justify-content: center;
+    text-align: center
+}
+
+#contact > div div {
+    width: 29.3%; /* CALCULADO EMPARANOIAO EN LA LIBRETA */
+    margin: 3%;
+    display: flex;
+    flex-direction: column
+}
+
+#contact small {
+    text-align: center;
+    margin-top: 5vh
+}
+
+#contact > div + div {
+    border-top: 1px solid black
+}
+
+#contact > div > div {
+    flex-direction: column
+}
+
+#contact a {
+    text-decoration: none;
+    padding: 1vh;
+    color: white;
+    width: 100%
+}
+
+#contact a:hover{
+    border: 1px solid white;
+    background-color: white;
+    color:rgb(42, 42, 95)
+}
+
+.inputFooter{
+    width: 100% !important
 }

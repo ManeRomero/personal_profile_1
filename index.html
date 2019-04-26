@@ -31,7 +31,7 @@
             </div>
         </header>
 
-        <div class="claim">            
+        <div class="claim">
             <h1>Viaja!</h1>
             <h3>Descubre Lugares Maravillosos!</h3>
             <a href="#" title="Grandes oportunidades para viajar!">ver destinos</a>
@@ -65,15 +65,36 @@
 
         <div>
             <p v-for="item in concepts" v-bind:class="item.class">{{item.title}}</p>
-            <input v-for="item in forms" type="text" v-bind:class="item.class" v-bind:placeholder="item.placeholder + ' ' + checkRequired()">
+            <input v-for="item in forms" type="text" v-bind:class="item.class"
+                v-bind:placeholder="item.placeholder + ' ' + checkRequired()">
             <textarea v-bind:placeholder="textareaPlac"></textarea>
             <small>* {{recomendation.toUpperCase()}}</small>
         </div>
     </section>
 
-    <main></main>
+    <footer id="contact">
+        <div>
+            <div>
+                <h3>{{uno[0].title.toUpperCase()}}</h3>
+                <a v-for="item in uno[1]" href="#contact">{{item}}</a>
+            </div>
+            <div>
+                <h3>{{dos[0].title.toUpperCase()}}</h3>
+                <a v-for="item in dos[1]" href="#contact">{{item}}</a>
+            </div>
+            <div>
+                <h3>{{tres[0].title.toUpperCase()}}</h3>
+                <input type="text" class="inputFooter" v-bind:placeholder="tres[0].placehold">
+                <a href="" class="botonFooter">{{tres[0].boton}}</a>
+            </div>
+        </div>
 
-    <footer></footer>
+        <div>
+            <small>
+                {{closing}}
+            </small>
+        </div>
+    </footer>
 
     <script src="./Vue.js"></script>
 </body>

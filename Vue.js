@@ -163,3 +163,32 @@ const Estamos = new Vue ({
         }
     } 
 })
+
+const Contactar = new Vue ({
+    el: '#contact',
+    data: {
+        uno: [
+            {title: 'necesitas ayuda?'},
+            ['0264 123 4567',
+            'enquiry@geekshubtravels.com',
+            'Lun-Vie: 9.30 - 19.00, Sáb: vamos no jodas']
+        ],
+        dos: [
+            {title: 'información'},
+            ['Quiénes somos',
+            'Preguntas Frecuentes',
+            'Política de privacidad',
+            'Condiciones generales',
+            'Aviso legal',
+            'Contacto',
+            'Programa de puntos']
+        ],
+        tres: [{
+            title: 'suscríbete a la newsletter',
+            placehold: 'Correo electrónico',
+            boton: 'suscríbete'
+        }
+    ],
+        closing: 'GeeksHubs Travels Manuel Romero 2019 Todos los derechos reservados.'
+    }
+})
