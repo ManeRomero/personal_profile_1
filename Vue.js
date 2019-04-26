@@ -1,7 +1,19 @@
-const app = new Vue ({
+const Portada = new Vue ({
     el: '#portada',
     data: {
-        articulos: ['Destinos', 'Quiénes Somos', 'Dónde Vamos'],
+        articulos: [{
+            naming: 'Destinos',
+            link: 'destinos'
+        },
+            { 
+            naming: 'Quiénes Somos',
+            link: 'about'
+        },
+            {
+            naming: 'Dónde Vamos',
+            link: 'vamos'
+        }
+    ],
         redesSociales:[
             {
             titulo: 'Visita nuestro Facebook',
@@ -34,5 +46,64 @@ const app = new Vue ({
             icono: 'fab fa-youtube'
         }
     ]
+    }
+})
+
+const Destinos = new Vue ({
+    el: '#destinos',
+    data: {
+        referencias: [
+            {
+            discount: 'Save 90$ pay only',
+            price: '359',
+            city: 'Mykonos',
+            alt: 'La Nueva Grecia, discotecas con sabor a Yogurt. Joroña que joroña!',
+            url: 'beijing.JPG'
+        },
+            {
+            discount: 'Save 75$ pay only',
+            price: '729',
+            city: 'London',
+            alt: 'La City Londinense. Autobuses de dos plantas y gente igual de estirada.',
+            url: 'buenos_aires.JPG'
+        },
+            {
+            discount: 'Save 35$ pay only',
+            price: '519',
+            city: 'Dublin',
+            alt: 'Mejor no les cabrees. El barrio está mal, pero viva San Patricio! ',
+            url: 'ciudad_mexico.JPG'
+        },
+            {
+            discount: 'Save 65$ pay only',
+            price: '329',
+            city: 'París',
+            alt: 'La ciudad del amor, oh la la! Prohibido echar un piti cerca de Catedrales.',
+            url: 'madrid.JPG'
+        },
+            {
+            discount: 'Save 95$ pay only',
+            price: '199',
+            city: 'Amsterdam',
+            alt: 'Se equivocaron con Las Vegas: lo que pasa en Amsterdam, se queda en Amsterdam',
+            url: 'new_york.JPG'
+        },
+            {
+            discount: 'Save 50$ pay only',
+            price: '659',
+            city: 'Rome',
+            alt: 'Rómulo y Remo fliparían con la que liaron. Levantas una piedra y sale otro vestigio',
+            url: 'tokyo.JPG'
+        }
+    ]
+    }
+})
+
+const Nosotros = new Vue ({
+    el: '#about',
+    data: {
+        title: 'Quiénes somos',
+        submit: 'Descubrir',
+        description: 'GeeksHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros entusiastas que deciden hacer de su pasión por conocer el mundo un modo de vida. Desde nuestros inicios hemos diseñado más de 500 viajes organizados a diferentes destinos de Europa, Norteamérica y Asia. Nuestro objetivo ahora es ir ampliando horizontes poco a poco.',
     }
 })

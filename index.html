@@ -14,7 +14,7 @@
 </head>
 
 <body>
-    <div id="portada">
+    <section id="portada">
         <header>
             <div class="logo">
                 <img src="./img/iconoweb.png" alt="GeeksHub Academy [logotipo]">
@@ -22,7 +22,7 @@
             </div>
 
             <nav>
-                <a v-for="item in articulos">{{item}}</a>
+                <a v-for="item in articulos" v-bind:href="'#' + item.link">{{item.naming}}</a>
             </nav>
 
             <div>
@@ -34,9 +34,29 @@
         <div class="claim">            
             <h1>Viaja!</h1>
             <h3>Descubre Lugares Maravillosos!</h3>
-            <a href="#">ver destinos</a>
+            <a href="#" title="Grandes oportunidades para viajar!">ver destinos</a>
         </div>
-    </div>
+    </section>
+
+    <section id="destinos">
+        <div v-for="item in referencias">
+            <div v-bind:title="item.alt + ' · Precio ' + item.price + '€.'">
+                <h3>{{item.discount}}</h3>
+                <img v-bind:src="'./img/' + item.url" v-bind:alt="item.ciudad">
+                <h4>{{item.city}}</h4>
+                <span>{{item.price}} €</span>
+                <span>S:·)</span>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div>
+            <h1>{{title.toUpperCase()}}</h1>
+            <p>{{description}}</p>
+            <a href="#about">{{submit.toUpperCase()}}</a>
+        </div>
+    </section>
 
     <main></main>
 
