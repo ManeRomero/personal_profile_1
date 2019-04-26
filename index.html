@@ -54,7 +54,20 @@
         <div>
             <h1>{{title.toUpperCase()}}</h1>
             <p>{{description}}</p>
-            <a href="#about">{{submit.toUpperCase()}}</a>
+            <a href="#about" v-bind:title="subtitle">{{submit.toUpperCase()}}</a>
+        </div>
+    </section>
+
+    <section id="estamos">
+        <div>
+            <img v-bind:src="'./img/' + mapUrl" alt="mapAddress">
+        </div>
+
+        <div>
+            <p v-for="item in concepts" v-bind:class="item.class">{{item.title}}</p>
+            <input v-for="item in forms" type="text" v-bind:class="item.class" v-bind:placeholder="item.placeholder + ' ' + checkRequired()">
+            <textarea v-bind:placeholder="textareaPlac"></textarea>
+            <small>* {{recomendation.toUpperCase()}}</small>
         </div>
     </section>
 

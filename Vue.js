@@ -11,7 +11,7 @@ const Portada = new Vue ({
         },
             {
             naming: 'Dónde Vamos',
-            link: 'vamos'
+            link: 'estamos'
         }
     ],
         redesSociales:[
@@ -103,7 +103,63 @@ const Nosotros = new Vue ({
     el: '#about',
     data: {
         title: 'Quiénes somos',
+        subtitle: 'GeeksHubs Travels, desde hace poco, pero pa siempre!',
         submit: 'Descubrir',
         description: 'GeeksHubs Travels es una agencia de viajes online creada en 2009 por un equipo de viajeros entusiastas que deciden hacer de su pasión por conocer el mundo un modo de vida. Desde nuestros inicios hemos diseñado más de 500 viajes organizados a diferentes destinos de Europa, Norteamérica y Asia. Nuestro objetivo ahora es ir ampliando horizontes poco a poco.',
     }
+})
+
+const Estamos = new Vue ({
+    el: '#estamos',
+    data: {
+        mapUrl: 'mapa.png',
+        mapAddress: 'Avenida Tocha de cojones, San Juan',
+        concepts: [{
+            title: 'E: enquiry@artiotravel.com',
+            class: ''
+        }, 
+        {
+            title: 'P: 0264 123 4567',
+            class: ''
+        },
+        {
+            title:'Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.',
+            class: ''
+        },
+        {
+            title: 'We are open from 8.30 AM - 4.00 PM week days.',
+            class:'thisIsTheLast'
+        }],
+        recomendation: 'please complete all fields correctly',
+        forms: [{
+            placeholder: 'Name',
+            required: true,
+        },
+        {
+            placeholder: 'Email',
+            required: true
+        },
+        {
+            placeholder: 'Phone',
+            required: false
+        },
+        {
+            placeholder: 'Country',
+            required: false
+        }],
+        textareaPlac: 'Message'
+    },
+     methods: {
+        checkRequired: function() {
+            for(var i = 0; i < this.forms.length; i++){
+                if (this.forms[i].required === true){
+                    this.forms[i].class = 'required'
+                }
+                else
+                {
+                    return ''
+                }
+            }
+        }
+    } 
 })

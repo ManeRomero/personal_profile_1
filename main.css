@@ -10,6 +10,17 @@ body {
     margin: auto
 }
 
+:root ::selection {
+    color: gold;
+    background: #373B44;
+    font-weight: 900
+}
+
+:root {
+    --shadow: 10px 10px 5px -4px #00000052;
+
+}
+
 /* PORTADA TOP */
 
 #portada {
@@ -23,7 +34,8 @@ header {
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-    padding-top: 5vh
+    padding-top: 5vh;
+    flex-flow: wrap
 }
 
 header img {
@@ -49,6 +61,7 @@ nav a {
     padding: 0.6vw;
     margin-left: 0;
     cursor: pointer;
+    text-decoration: none
 }
 
 nav a:hover {
@@ -57,7 +70,10 @@ nav a:hover {
     font-style: italic;
     border: 1px solid cornflowerblue;
     background-color: white;
-    border-radius: 5px
+    border-radius: 5px;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 header img~h1 {
@@ -74,7 +90,10 @@ a:hover i {
     font-size: 1.7em;
     border: 1px solid cornflowerblue;
     padding: 0.3vw;
-    background-color: white
+    background-color: white;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
 .claim {
@@ -97,6 +116,14 @@ a:hover i {
     text-align: center;
 }
 
+.claim a:hover {
+    background-color: gold;
+    border-radius: 10px;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
 /* DESTINOS */
 
 #destinos {
@@ -116,19 +143,22 @@ a:hover i {
     overflow: hidden;
 }
 
-#destinos>div:hover{
+#destinos>div:hover {
     border: 1px solid grey;
     transform: rotateZ(-3deg);
     cursor: pointer;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow)
 }
 
 #destinos h3 {
     padding: 1vw;
     background-color: rgb(42, 42, 95);
-    color: white;
+    color: white
 }
 
-#destinos h3:hover{
+#destinos h3:hover {
     background-color: rgb(42, 42, 42);
     color: gold
 }
@@ -159,11 +189,14 @@ a:hover i {
 
 #destinos span:hover {
     color: rgb(42, 42, 95);
-    border: 1px solid rgb(42,42,95);
-    background-color: white    
+    border: 1px solid rgb(42, 42, 95);
+    background-color: white;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
-#destinos span ~ span {
+#destinos span~span {
     color: white;
     padding: 0.6vw;
     border: 1px solid greenyellow;
@@ -177,15 +210,19 @@ a:hover i {
     padding: auto
 }
 
-#destinos>div:hover span ~ span {
+#destinos>div:hover span~span {
     display: block;
 }
 
-#destinos span ~ span:hover {
-    background-color: rgb(243, 240, 235)
+#destinos span~span:hover {
+    background-color: rgb(243, 240, 235);
+    color: yellowgreen;
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
 }
 
-span ~ span:hover #destinos > div {
+span~span:hover #destinos>div {
     background-color: gold
 }
 
@@ -196,15 +233,17 @@ span ~ span:hover #destinos > div {
     padding: 0.5vw
 }
 
-#about > div {
+#about>div {
     width: 30vw;
     background-color: white;
     padding: 4vw;
-    margin: 10vw
+    margin: 5vw;
+    display: flex;
+    flex-direction: column
 }
 
 #about p {
-    margin-top: 5vh
+    margin-top: 10vh
 }
 
 #about h1 {
@@ -218,5 +257,79 @@ span ~ span:hover #destinos > div {
     color: gold;
     background-color: rgb(42, 42, 95);
     padding: 1vw;
+    font-weight: 900;
+    margin: 10vh auto 0;
+    width: 50%;
+    text-align: center
+}
+
+#about a:hover {
+    background-color: gold;
+    color: rgb(42, 42, 95);
+    -webkit-box-shadow: var(--shadow);
+    -moz-box-shadow: var(--shadow);
+    box-shadow: var(--shadow);
+}
+
+/* DÓNDE ESTAMOS */
+
+#estamos {
+    height: 100vh;
+    display: flex;
+    flex-direction: row
+}
+
+#estamos>div {
+    width: 40%;
+    margin: 5%;
+    text-align: center;
+    height: auto
+}
+
+#estamos>div~div {
+    flex-direction: column;
+    text-align: left;
+    font-weight: 600;
+    flex-flow: wrap
+}
+
+#estamos>div~div p {
+    padding: 2vh
+}
+
+.thisIsTheLast {
     position: relative
+}
+
+.thisIsTheLast::after {
+    position: absolute;
+    top: 7vh;
+    left: 0;
+    content: '';
+    width: 5vw;
+    background-color: cornflowerblue;
+    height: 5px;
+}
+
+#estamos input {
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    border-radius: 2px;
+    width: 46%;
+    margin: 2%;
+    padding: 1vw
+}
+
+textarea {
+    border: 1px solid rgba(128, 128, 128, 0.253);
+    margin: 2%;
+    margin-top: 2vh;
+    min-width: 96%;
+    max-width: 96%;
+    max-height: 100px;
+    min-height: 50px
+}
+
+#estamos small {
+    letter-spacing: 0.2vw;
+    color: grey
 }
